@@ -1,0 +1,19 @@
+{
+  "name": "chonk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomek-skrond/chonk-bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tomek-skrond/chonk-bot/issues"
+  },
+  "homepage": "https://github.com/tomek-skrond/chonk-bot#readme"
+}
