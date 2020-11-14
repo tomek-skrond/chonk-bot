@@ -10,18 +10,25 @@ client.login(readDiscordKey());
 client.on('ready', readyDiscord);
 
 function readTextFile(args) {
+    /*
+    var line_arr = Array();
 
     const readInterface = readline.createInterface({
         input: fs.createReadStream(`phrases/${args}.txt`),
+        output: process.stdout,
         console: false
     });
 
-    var line_arr = Array();
+    
+    
     readInterface.on('line', function(line) {
         line_arr.push(line);
     });
 
     return line_arr;
+    */
+    
+    return fs.readFileSync(`phrases/${args}.txt`).toString().split("\n");
 }
 
 
@@ -40,13 +47,10 @@ function readDiscordKey(){
 }
 
 function getRndInteger(min, max) {
-    return Math.floor(Math.random() * (max - min) ) + min;
+	return min + Math.floor((max - min) * Math.random());
 }
 
 function giveVoice(phrase_array){
-    console.log(getRndInteger(1,phrase_array.length));
-    console.log(phrase_array.length);
-    console.log(Math.random()%(phrase_array.length));
     return phrase_array[getRndInteger(0,phrase_array.length)];
 }
 
@@ -70,5 +74,8 @@ client.on('message', message => {
 
 ////TESTY
 
-const outp = readTextFile('Grzana');
+console.log(readTextFile('Mignet'));
+console.log(readTextFile('Grzana'));
+console.log('------------------------------------');
 console.log(giveVoice(readTextFile('Grzana')));
+console.log(giveVoice(readTextFile('Mignet')));
