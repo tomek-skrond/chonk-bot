@@ -2,32 +2,16 @@ console.log('hello bot');
 var fs = require('fs');
 const readline = require('readline');
 
-
+//logging in using a key read from a file
 const Discord = require('discord.js');
 const client = new Discord.Client();
 client.login(readDiscordKey());
 
+//listening for 'ready event'
 client.on('ready', readyDiscord);
 
+//reading a text file from a path given in args
 function readTextFile(args) {
-    /*
-    var line_arr = Array();
-
-    const readInterface = readline.createInterface({
-        input: fs.createReadStream(`phrases/${args}.txt`),
-        output: process.stdout,
-        console: false
-    });
-
-    
-    
-    readInterface.on('line', function(line) {
-        line_arr.push(line);
-    });
-
-    return line_arr;
-    */
-    
     return fs.readFileSync(`phrases/${args}.txt`).toString().split("\n");
 }
 
