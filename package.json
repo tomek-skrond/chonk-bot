@@ -2,16 +2,24 @@
   "name": "chonk",
   "version": "1.0.0",
   "description": "",
-  "main": "bot.js",
+  "main": "index.js",
+  "engines": {
+      "node": "12.x",
+      "npm": "*"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node bot.js",
-    "dev": "node bot.js"
+    "start": "node index.js",
+    "dev": "node index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tomek-skrond/chonk-bot.git"
   },
+   "keywords": [
+    "heroku",
+    "discord.js"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
