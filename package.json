@@ -4,26 +4,28 @@
   "description": "",
   "main": "index.js",
   "engines": {
-      "node": "12.x",
-      "npm": "*"
+    "node": "12.x",
+    "npm": "*"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "dev": "node index.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tomek-skrond/chonk-bot.git"
   },
-   "keywords": [
+  "keywords": [
     "heroku",
     "discord.js"
   ],
-  "author": "",
+  "author": "tomek",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/tomek-skrond/chonk-bot/issues"
   },
-  "homepage": "https://github.com/tomek-skrond/chonk-bot#readme"
+  "homepage": "https://github.com/tomek-skrond/chonk-bot#readme",
+  "dependencies": {
+    "discord.js": "^12.5.0"
+  }
 }
