@@ -2,10 +2,16 @@ console.log('hello bot');
 var fs = require('fs');
 const readline = require('readline');
 
-//logging in using a key read from a file
+const aws = require('aws-sdk');
+
+let keys = new aws.Keys({
+  accessKeyId: process.env.DISC_AUTH,
+});
+
+//logging in
 const Discord = require('discord.js');
 const client = new Discord.Client();
-client.login(DISC_KEY);
+client.login(DISC_AUTH);
 
 //listening for 'ready event'
 client.on('ready', readyDiscord);
