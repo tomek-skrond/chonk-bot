@@ -5,7 +5,7 @@ const readline = require('readline');
 //logging in using a key read from a file
 const Discord = require('discord.js');
 const client = new Discord.Client();
-client.login(readDiscordKey());
+client.login(DISC_KEY);
 
 //listening for 'ready event'
 client.on('ready', readyDiscord);
