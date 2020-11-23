@@ -4,7 +4,7 @@ const readline = require('readline');
 
 const aws = require('aws-sdk');
 
-let keys = new aws.Keys({
+let keys = new aws.S3({
   accessKeyId: process.env.DISC_AUTH,
 });
 
