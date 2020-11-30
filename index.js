@@ -1,17 +1,18 @@
-console.log('hello bot');
 var fs = require('fs');
 const readline = require('readline');
-
+/*
 const aws = require('aws-sdk');
-
 let keys = new aws.S3({
   accessKeyId: process.env.DISC_AUTH,
 });
+*/
+
+console.log(process.env);
 
 //logging in
 const Discord = require('discord.js');
 const client = new Discord.Client();
-client.login(DISC_AUTH);
+client.login(config.token);
 
 //listening for 'ready event'
 client.on('ready', readyDiscord);
@@ -63,9 +64,10 @@ client.on('message', message => {
 })
 
 ////TESTY
-
+/*
 console.log(readTextFile('Mignet'));
 console.log(readTextFile('Grzana'));
 console.log('------------------------------------');
 console.log(giveVoice(readTextFile('Grzana')));
 console.log(giveVoice(readTextFile('Mignet')));
+*/
